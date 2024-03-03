@@ -8,7 +8,7 @@ import {
 } from "../../services/getCityByNameService";
 
 interface SelectCityProps {
-  onSelect: (item: CityProps[]) => void;
+  onSelect: (item: CityProps) => void;
 }
 
 export function SelectCity({ onSelect }: SelectCityProps) {
@@ -45,7 +45,7 @@ export function SelectCity({ onSelect }: SelectCityProps) {
       <div className="select-list">
         {city.length > 0 &&
           city.map((item) => (
-            <button type="button" key={item.id} onClick={() => onSelect(city)}>
+            <button type="button" key={item.id} onClick={() => onSelect(item)}>
               <p>{item.name}</p>
             </button>
           ))}

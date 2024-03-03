@@ -7,7 +7,7 @@ import { CityProps } from "../../services/getCityByNameService";
 export function Search() {
   const navigate = useNavigate();
 
-  function handleSelected(city: CityProps[]) {
+  function handleSelected(city: CityProps) {
     localStorage.setItem("@typewheather:city", JSON.stringify(city));
     navigate("/dashboard");
   }
